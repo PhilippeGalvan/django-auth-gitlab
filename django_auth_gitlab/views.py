@@ -28,9 +28,9 @@ def callback(request):
 
     url_is_safe = is_safe_url(
         url = return_path,
-        host = request.get_host(),
-        #allowed_hosts = set(request.get_host()),
-        #require_https = request.is_secure(),
+        #host = request.get_host(),
+        allowed_hosts = set(request.get_host()),
+        require_https = request.is_secure(),
     )
     if not url_is_safe:
         return redirect(resolve_url(settings.LOGIN_REDIRECT_URL))

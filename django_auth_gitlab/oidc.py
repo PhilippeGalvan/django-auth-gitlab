@@ -8,7 +8,7 @@ class TokenResponse:
         self._data = data
 
         if server:
-            r = requests.get(server.url + "api/v3/user", params=dict(
+            r = requests.get(server.url + "api/v4/user", params=dict(
                 access_token=self.access_token,
             ))
             r.raise_for_status()
