@@ -1,7 +1,5 @@
-Django-Auth-GitLab - GitLab authentication support for Django
+Django-GitLab-Auth - GitLab authentication support for Django
 =============================================================
-.. image:: https://badge.fury.io/py/django-auth-gitlab.svg
-    :target: https://badge.fury.io/py/django-auth-gitlab
 
 This is a Django login view that authenticates against GitLab.
 
@@ -21,14 +19,14 @@ Installation
 
 .. code:: python
 
-    pip install django-auth-gitlab
+    pip install django-gitlab-auth
 
 settings.py
 ~~~~~~~~~~~
 
 .. code:: python
 
-    INSTALLED_APPS += ['django_auth_gitlab']
+    INSTALLED_APPS += ['django_gitlab_auth']
 
 urls.py
 ~~~~~~~
@@ -36,7 +34,7 @@ urls.py
 .. code:: python
 
     urlpatterns += [
-        url(r'^accounts/login/', include('django_auth_gitlab.urls')),
+        url(r'^accounts/login/', include('django_gitlab_auth.urls')),
     ]
 
 Configuration
